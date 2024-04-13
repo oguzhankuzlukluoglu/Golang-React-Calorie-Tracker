@@ -4,6 +4,14 @@ import { Button,Form,Container,Modal }  from 'react-bootstrap';
 import Entry from './single-entry.component';
 
 const Entries = () => {
+    const [entries,setEntries] = useState([])
+    const [refreshData,setRefreshData] =useState(false)
+    const [changeEntry,setChangeEntry]=useState({"change":false, "id":0})
+    const [changeIngredient,setChangeIngredient]=useState({"change":false,"id":0})
+    const [newIngredientName,setNewIngredientName]=useState("")
+    const [AddNewEntry,setAddNewEntry]=useState(false)
+    const [newEntry,setNewEntry]=useState({"dish":"","ingredients":"","calories":0,"fat":0})
+    
     return(
         <div>
             <Container>
